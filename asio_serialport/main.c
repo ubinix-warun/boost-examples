@@ -53,8 +53,9 @@ public:
     port.set_option( boost::asio::serial_port_base::parity() );	// default none
     port.set_option( boost::asio::serial_port_base::character_size( 8 ) );
     port.set_option( boost::asio::serial_port_base::stop_bits() );	// default one
-    port.set_option( boost::asio::serial_port_base::baud_rate( baud_rate ) );
   */
+    port.set_option( boost::asio::serial_port_base::baud_rate( 115200 ) );
+  
     read_some();
     
     // run the IO service as a separate thread, so the main thread can do others
